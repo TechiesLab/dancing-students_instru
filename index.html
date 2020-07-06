@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Les étu-danses</title>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/graduate.jpg);">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>Les étu-danses</h1>
+          <h4>intro aux classes en JS</h4>
+        </div>
+      </div>
+      <p>Défi dansant pour approfondir les classes en JavaScript et découvrir plein de nouvelles fonction en P5.js. Olé!💃</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+    <div class="gamification">
+      <div class="progress">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Etape 1 - Défis à compléter avant celui-ci
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Avant de t'attaquer à ce défi, on te conseille de compléter les défis suivants:</p>
+            <ol>
+              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je serai...</a></li>
+              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
+              <li><a href="https://techieslab.github.io/balloon_instructions/" target="_blank">Péter ta balloune</a></li>
+              <li><a href="https://techieslab.github.io/soap-bubble-adv_instructions/" target="_blank">Bulles de savant</a></li>
+              <li><a href="https://techieslab.github.io/classes-intro_instructions/" target="_blank">La nuit étoilée</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Etape 2 - Connexion à P5.js
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Première chose avant de commencer à travailler sur n'importe quel projet p5.js: <strong>connecte-toi <a href="https://editor.p5js.org/" target="_blank">à ton compte</a></strong> en cliquant sur "Log in".</p>
+            <img src="images/log_in.png" class="img-shadow mb-3" alt="">
+
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>
+                Ça semble bête à dire... mais n'oublie pas de te connecter à ton compte avant de commencer à travailler! Cela te permettra de sauvegarder gratuitement ton travail (tes <em>sketchs</em>) sur les serveurs de p5.js. Si tu ne le fais pas, tu dois alors télécharger les fichers localement (sur ton ordinateur) et s'il arrive quoique ce soit, tu risques de perdre tout ton travail 😢
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              Etape 3 - Une seule étudiante!
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>L'objectif de ce défi, c'est de commencer à comprendre à quoi servent les <strong>classes</strong> en JavaScript (et dans beaucoup d'autres langages de programmation).</p>
+
+            <p>À vrai dire, on pourrait très bien se passer des classes et coder en n'utilisant que des <strong>variables</strong>, des <strong>fonctions</strong>, des <strong>boucles</strong> et des <strong>conditions</strong>.</p>
+
+            <p>Alors pourquoi utiliser des classes?</p>
+
+            <p>Parce qu'elles simplifient notre vie de dev, surtout lorsque nos programmes commencent à être trrrrrrrrrès longs!</p>
+
+            <p>Pour s'en rendre compte, on va coder <strong>deux fois</strong> le même programme: la première fois <em>sans</em> classe et la seconde fois <em>avec</em> des classes. À la fin, tu pourras décider quelle version tu préfères.</p>
+
+            <p>L'objectif, c'est de coder trois (voire plus!) étudiants en p5.js, comme ceci:</p>
+
+            <img src="images/students.png" class="img-shadow flexgif mb-3" alt="">
+
+            <p>En bonus, tu peux faire danser tes étudiants avec de la musique 🎵 lorsque <a href="https://editor.p5js.org/Margotte/full/KnCoTs_iv" target="_blank">tu cliques sur le canevas</a>.</p>
+
+            <p>Rappelle-toi: il faut toujours commencer par le plus simple! On va commencer par un visage tout simple: un ovale pour le contour du visage.</p>
+            <img src="images/face.png" class="img-shadow mb-3" alt="">
+
+            <p>Commence un nouveau projet p5.js que tu peux appeler "étudiants sans classe" 😉. De quelles fonctions auras-tu besoin pour dessiner un ovale et pour lui donner la couleur de ton choix?</p>
+
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint3a" role="button" aria-expanded="false" aria-controls="collapseHint3a">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="collapseHint3a">
+              <div class="card card-body">
+                <p> Tu auras besoin de la fonction <code class="language-js">ellipse()</code> et de la fonction <code class="language-js">fill()</code></p>
+              </div>
+            </div>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer3a" role="button" aria-expanded="false" aria-controls="collapseAnswer3a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="collapseAnswer3a">
+              <div class="card card-body">
+                <p>Ton code pourrait ressembler à ceci:</p>
+                <pre>
+                  <code class="language-js">
+                  function setup() {
+                    createCanvas(400, 400);
+                  }
+
+                  function draw() {
+                    background(220);
+
+                    fill("peru");
+                    ellipse(200, 100, 50, 60);
+                  }
+                </code>
+            </pre>
+            <p>Ici, <code class="language-js">"peru"</code> est la couleur de la peau (tu peux en choisir une autre en consultant <a href="https://htmlcolorcodes.com/color-names/">ce site des noms de couleur en HTML</a>). Si tu veux que ton visage soit plus rond, tu peux changer les paramètres de ton ellipse: <code class="language-js">ellipse(200, 100, 55, 60)</code>, par exemple.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- end of card -->
+
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Etape 4 - Je veux tes yeux 👀
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>Il est temps d'ajouter des yeux à notre visage! Quelle est la façon la plus simple de coder des yeux?</p>
+
+        <p>Deux cercles et on y est! Les yeux de mon étudiante seront <strong style="color: olive">vert olive</strong>!</p>
+
+        <img src="images/one-eye.png" class="img-shadow mb-3" alt="">
+
+        <p>Bon... là l'étudiante n'a qu'un oeil, et en plein milieu de son visage. Pas top...</p>
+        <p>En même temps, j'ai bêtement réutilisé les mêmes coordonnées que pour mon visage:</p>
+        <pre>
+          <code class="language-js">
+          function draw() {
+            background(220);
+
+            // le visage
+            fill("peru");
+            ellipse(200, 100, 50, 60);
+
+            // les yeux
+            fill("olive");
+            circle(200, 100, 10);
+            circle(200, 100, 10);
+          }
+        </code>
+      </pre>
+
+      <p>Comment faire pour déplacer l'oeil gauche à gauche?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint4a" role="button" aria-expanded="false" aria-controls="collapseHint4a">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint4a">
+        <div class="card card-body">
+          <p>N'hésite pas à consulter <a href="https://p5js.org/reference/#/p5/circle">la documentation de la fonction <code class="language-js">circle()</code></a>. Elle nous rappelle à quoi servent les trois paramètres:</p>
+
+          <pre>
+            <code class="language-js">
+            circle(x, y, d)
+            </code>
+          </pre>
+
+          <p><code class="language-js">x</code> étant la position du cercle sur l'axe horizontal, <code class="language-js">y</code> étant la position sur l'axe vertical et <code class="language-js">d</code> le diamètre du cercle.</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer4a" role="button" aria-expanded="false" aria-controls="collapseAnswer4a">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer4a">
+        <div class="card card-body">
+          <p>Eh oui, changer la position en <code class="language-js">x</code> de mon cercle:</p>
+          <pre>
+            <code class="language-js">
+              circle(190, 100, 10);
+            </code>
+          </pre>
+          <p>Et tant qu'à y être, je pourrais aussi monter un peu l'oeil:</p>
+          <pre>
+            <code class="language-js">
+              circle(190, 95, 10);
+            </code>
+          </pre>
+        </div>
+      </div>
+        <p>C'est déjà mieux!</p>
+        <img src="images/face_2eyes.png" class="img-shadow mb-3" alt="">
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="heading5">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+        Etape 5 - Un sourire 👄
+      </button>
+    </h2>
+  </div>
+  <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Dessiner un sourire, c'est comme dessiner une demi-ellipse:</p>
+      <img src="images/mouth.png" class="img-shadow mb-3" alt="">
+
+      <p>Il n'existe pas de fonction "demi-ellispe" en p5.js. Par contre, il existe une <a href="https://p5js.org/reference/#/p5/arc">fonction <code class="language-js">arc()</code></a>. En lisant la documentation, es-tu capable de faire sourire ton étudiante?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5a" role="button" aria-expanded="false" aria-controls="collapseHint5a">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint5a">
+        <div class="card card-body">
+          <p>C'est toujours une bonne idée de tester les exemples. Allons-y avec le premier exemple de la documentation:</p>
+          <pre>
+            <code class="language-js">
+            arc(50, 55, 50, 50, 0, HALF_PI);
+            </code>
+          </pre>
+          <div><img src="images/mouth_ex.png" class="img-shadow mb-3" alt=""></div>
+          <p>Pas génial... On a un demi de sourire vert olive dans le coin gauche. Tentons déjà de rendre le sourire blanc!</p>
+        </div>
+      </div>
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5b" role="button" aria-expanded="false" aria-controls="collapseHint5b">Indice</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint5b">
+        <div class="card card-body">
+          <p>Pour un sourire blanc, il faut utiliser la fonction <code class="language-js">fill()</code>:</p>
+          <pre>
+            <code class="language-js">
+            fill("white");
+            arc(50, 55, 50, 50, 0, HALF_PI);
+            </code>
+          </pre>
+          <div><img src="images/mouth_white.png" class="img-shadow mb-3" alt=""></div>
+          <p>Maintenant, comment faire pour que ce ne soit pas un demi sourire mais un sourire complet?</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+
+</div>
+</div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i>
+      2020 Techies Lab ASBL. All rights reserved.
+    </a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/prism.js"></script>
+<script type="text/javascript" src="javascript/app.js"></script>
+</body>
+</html>
