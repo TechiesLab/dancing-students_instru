@@ -101,7 +101,7 @@
 
             <p>Parce qu'elles simplifient notre vie de dev, surtout lorsque nos programmes commencent à être trrrrrrrrrès longs!</p>
 
-            <p>Pour s'en rendre compte, on va coder <strong>deux fois</strong> le même programme: la première fois <em>sans</em> classe et la seconde fois <em>avec</em> des classes. À la fin, tu pourras décider quelle version tu préfères.</p>
+            <p>Pour s'en rendre compte, on va coder <strong>deux fois</strong> le même programme: la première fois <em>sans</em> classe et la seconde fois <em>avec</em>. À la fin, tu pourras décider quelle version tu préfères.</p>
 
             <p>L'objectif, c'est de coder trois (voire plus!) étudiants en p5.js, comme ceci:</p>
 
@@ -166,7 +166,7 @@
 
         <img src="images/one-eye.png" class="img-shadow mb-3" alt="">
 
-        <p>Bon... là l'étudiante n'a qu'un oeil, et en plein milieu de son visage. Pas top...</p>
+        <p>Bon, l'étudiante n'a qu'un seul œil en plein milieu de son visage. Pas top...</p>
         <p>En même temps, j'ai bêtement réutilisé les mêmes coordonnées que pour mon visage:</p>
         <pre>
           <code class="language-js">
@@ -245,7 +245,7 @@
       <p>Il n'existe pas de fonction "demi-ellispe" en p5.js. Par contre, il existe une <a href="https://p5js.org/reference/#/p5/arc">fonction <code class="language-js">arc()</code></a>. En lisant la documentation, es-tu capable de faire sourire ton étudiante?</p>
 
       <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5a" role="button" aria-expanded="false" aria-controls="collapseHint5a">Indice</a>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5a" role="button" aria-expanded="false" aria-controls="collapseHint5a">Indice 1</a>
       </p>
       <div class="collapse mb-3" id="collapseHint5a">
         <div class="card card-body">
@@ -260,7 +260,7 @@
         </div>
       </div>
       <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5b" role="button" aria-expanded="false" aria-controls="collapseHint5b">Indice</a>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5b" role="button" aria-expanded="false" aria-controls="collapseHint5b">Indice 2</a>
       </p>
       <div class="collapse mb-3" id="collapseHint5b">
         <div class="card card-body">
@@ -276,6 +276,107 @@
 
         </div>
       </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5c" role="button" aria-expanded="false" aria-controls="collapseHint5c">Indice 3</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint5c">
+        <div class="card card-body">
+          <p>Pour un sourire complet, il faut comprendre ce que veulent dire les deux derniers paramètres de la fonction <code class="language-js">arc(50, 55, 50, 50, 0, HALF_PI)</code>: <code class="language-js">0</code> et <code class="language-js">HALF_PI</code>. La documentation indique ceci:</p>
+          <ul>
+            <li>start: angle to start the arc, specified in radians</li>
+            <li>stop: angle to stop the arc, specified in radians</li>
+          </ul>
+
+          <p>Les deux paramètres sont des nombres qui représentent des angles. Ici, le paramètre <strong>start</strong> prend la valeur de <code class="language-js">0</code> et le paramètre <strong>stop</strong> prend la valeur de <code class="language-js">HALF_PI</code>. <code class="language-js">HALF_PI</code> c'est pas un nombre pourtant...</p>
+
+          <p>En fait, si. <code class="language-js">HALF_PI</code> est une constante en JavaScript. Une constante, c'est comme une variable, mais une variable qui contient une valeur qui ne change jamais. Tu as probablement déjà entendu parler du nombre <strong>pi</strong>, souvent noté <strong>π</strong>. Sa valeur est de 3,14... et des poussières!</p>
+
+          <p>Sans surprise, la constante <code class="language-js">HALF_PI</code>, c'est la moitié de pi, soit 1,57079632679489661923 et encore des poussières :)</p>
+
+          <p>Ok, donc on a un angle de 0° et un angle de 1,57° ?? Pas si vite! Les deux nombres sont des <em>radians</em>, pas des <em>degrés</em>! Si tu observes ce schéma, un radian de 0, équivaut à 0 degrés:</p>
+          <div><img src="images/circle_origin.jpg" class="flexgif img-shadow mb-3" alt=""></div>
+
+          <p>Par contre, un radian de 1,57 (la moitié de pi) équivaut à un angle de...</p>
+          <div><img src="images/circle_half_pi.jpg" class="flexgif img-shadow mb-3" alt=""></div>
+          <p>90°!</p>
+
+          <p>Notre fonction arc devrait donc dessiner l'arc suivant:</p>
+          <img src="images/circle_area.jpg" class="flexgif img-shadow mb-3" alt="">
+
+          <p>C'est pratiquement cela, sauf que p5.js nous l'a dessiné à l'envers:</p>
+          <div>
+          <img src="images/white-olive-quarter.png" class="img-shadow mb-3" alt=""></div>
+          <p>Sais-tu pourquoi?</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5d" role="button" aria-expanded="false" aria-controls="collapseHint5d">Indice 4</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint5d">
+        <div class="card card-body">
+          <p>Si p5.js nous a dessiné l'arc vers le "bas", c'est à cause du "sens" de l'axe des <code class="language-js">y</code>. Dans ce schéma, la valeur de <code class="language-js">y</code> augmente lorsqu'on va vers le haut:</p>
+          <div><img src="images/origin_normal.jpg" class="flexgif img-shadow mb-3" alt=""></div>
+          <p>Au contraire, dans un canevas p5.js, la valeur de <code class="language-js">y</code> augmente lorsqu'on va vers le <strong>bas</strong>.</p>
+
+          <p>Sachant cela, comment faire pour que notre arc soit plus grand et fasse un sourire? Eh oui, il faudra changer le paramètre <code class="language-js">stop</code>.</p>
+
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint5e" role="button" aria-expanded="false" aria-controls="collapseHint5e">Indice 5</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint5e">
+        <div class="card card-body">
+          <p>Maintenant que tu as un sourire complet, modifie les deux premiers paramètres de la foncion <code class="language-js">arc()</code> pour positionner ton sourire au centre du visage de l'étudiante.</p>
+          <p>Et dernier petit indice, pour que le sourire soit complet tu devras utiliser le paramètre <code class="language-js">CHORD</code>.</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer5a" role="button" aria-expanded="false" aria-controls="collapseAnswer5a">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer5a">
+        <div class="card card-body">
+          <p>Voici le code:</p>
+          <pre>
+            <code class="language-js">
+            arc(200, 110, 20, 15, 0, PI, CHORD);
+            </code>
+          </pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingSix">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Etape 6 - Une chevelure incroyable 👨‍🦱
+      </button>
+    </h2>
+  </div>
+  <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+    <div class="card-body">
+    <p>Avant de passer à l'étudiant suivant, on va ajouter quelques cheuveux à notre étudiante, histoire de dire qu'elle ne prendra pas de coup de soleil sur la tête!</p>
+
+    <p>Allons au plus simple avec 3 rectangles de couleur, bien placés :)</p>
+    <img src="images/violet_hair.png" class="img-shadow mb-3" alt="">
+
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint6" role="button" aria-expanded="false" aria-controls="collapseHint6">Indice</a>
+    </p>
+    <div class="collapse mb-3" id="collapseHint6">
+      <div class="card card-body">
+        <p>Pour dessiner des rectangles, la fonction <code class="language-js">rect()</code> te sera sans doute utile!</p>
+      </div>
+    </div>
+
 
     </div>
   </div>
