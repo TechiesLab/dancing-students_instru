@@ -363,7 +363,7 @@
   </div>
   <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
     <div class="card-body">
-    <p>Avant de passer à l'étudiant suivant, on va ajouter quelques cheuveux à notre étudiante, histoire de dire qu'elle ne prendra pas de coup de soleil sur la tête!</p>
+    <p>Avant de passer à l'étudiant suivant, on va ajouter quelques cheveux à notre étudiante, histoire de dire qu'elle ne prendra pas de coup de soleil sur la tête!</p>
 
     <p>Allons au plus simple avec 3 rectangles de couleur, bien placés :)</p>
     <img src="images/violet_hair.png" class="img-shadow mb-3" alt="">
@@ -390,7 +390,7 @@
   </div>
   <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
     <div class="card-body">
-      <p>Nous allons maintenant donner un nom à notre étudiante. La mienne s'appellera Lara, car c'est le nom d'une élève du Techies qui nous a inspiré ce défi!</p>
+      <p>Nous allons maintenant donner un nom à notre étudiante. La nôtre s'appellera Lara, car c'est le nom d'une élève du Techies qui nous a inspiré ce défi!</p>
       <p>Affiche le nom de ton étudiante en-dessous de son visage comme ceci:</p>
       <img src="images/name.png" class="img-shadow mb-3" alt="">
 
@@ -400,6 +400,226 @@
       <div class="collapse mb-3" id="collapseHint7">
         <div class="card card-body">
           <p>Utilise la fonction <code class="language-js">text()</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingEight">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        Etape 8 - Trois étudiants 🧑🏿‍🎓 🧑🏼‍🎓 🧑🏼‍🎓
+      </button>
+    </h2>
+  </div>
+  <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Il est temps d'ajouter les amis de Lara: Margo et Seb. À toi de coder deux étudiant-e-s de plus!</p>
+
+      <div class="alert alert-warning" role="alert">
+        <p>
+          <i class="fas fa-exclamation-circle"></i>
+          Assure-toi que les
+          <ul>
+            <li>les yeux,</li>
+            <li>la peau,</li>
+            <li>et les cheveux</li>
+          </ul>
+          de tes étudiant-e-s soient de couleurs différentes.
+        </p>
+      </div>
+    <img src="images/3_students.png" class="img-shadow mb-3" alt="">
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingNine">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Etape 9 - Des millions d'étudiants...
+      </button>
+    </h2>
+  </div>
+  <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+    <div class="card-body">
+      <p>Comment as-tu trouvé l'expérience de coder deux étudiants de plus? Est-ce que c'était facile, difficile? Court, long?</p>
+
+      <p>Combien de lignes fait ton code maintenant?</p>
+
+      <p>Le mien fait 80 lignes (avec quelques lignes que j'ai laissées vides, pour "aérer" mon code, le rendre plus lisible, et quelques lignes de commentaires aussi).</p>
+
+      <p>Imagine qu'on veuille créer 3 étudiants de plus. Ou 15 étudiants de plus. Ou 100!</p>
+
+      <p>Aïe, aïe, aïe, ça fait beaucoup de copier-coller tout ça! Notre code va devenir <strong>suuuuuuuper</strong> long!</p>
+
+      <p>Peux-tu penser à une façon de réduire la longueur du code?</p>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9" role="button" aria-expanded="false" aria-controls="collapseHint9">Indice 1</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9">
+        <div class="card card-body">
+          <p>Eh oui, on pourrait coder une <strong>fonction</strong>, qui reprendrait toutes les instructions pour coder un étudiant.</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9b" role="button" aria-expanded="false" aria-controls="collapseHint9b">Indice 2</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9b">
+        <div class="card card-body">
+          <p>Après les fonctions <code class="language-js">setup()</code> et <code class="language-js">draw()</code>, tu peux coder une fonction <code class="language-js">drawStudent()</code> (tu peux donner un autre nom à ta fonction).</p>
+
+          <p>Ma fonction a l'air de ceci:</p>
+          <pre>
+            <code class="language-js">
+            function drawStudent() {
+  // le visage
+  fill("RosyBrown");
+  ellipse(300, 300, 50, 60);
+
+  // les yeux
+  fill("silver");
+  circle(290, 295, 10);
+  circle(310, 295, 10);
+
+  // bouche
+  fill("white");
+  arc(300, 310, 20, 15, 0, PI, CHORD);
+
+  // cheuveux
+  fill("Wheat");
+  rect(300-2.5, 300-39, 5, 15);
+  rect(300+5, 300-37, 5, 15);
+  rect(300-9.5, 300-37, 5, 15);
+
+  // nom
+  fill("black");
+  textSize(32);
+  text("Margo", 300-35, 300+80);
+}
+            </code>
+          </pre>
+
+          <p>En fait, j'y ai mis tout le code pour l'étudiante Margo. Manque de pot, Margo a disparu du canevas. Sais-tu pourquoi?</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9c" role="button" aria-expanded="false" aria-controls="collapseHint9c">Indice 3</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9c">
+        <div class="card card-body">
+          <p>Maintenant que le code de Margo est dans la fonction <code class="language-js">drawStudent()</code>, il faut que je me serve (que j'appelle) cette fonction. Dans la fonction <code class="language-js">draw()</code>, j'ajoute la ligne suivante:</p>
+
+          <pre>
+            <code class="language-js">
+            function draw() {
+              // code pour dessiner Lara
+              //...
+
+              // code pour dessiner Seb
+              //...
+
+              // code pour dessiner Seb
+              drawStudent();
+            }
+            </code>
+          </pre>
+
+          <p>Et hop, Margo est de retour! Puis-je me servir de ma fonction <code class="language-js">drawStudent()</code> à nouveau pour Seb? Pas vraiment... Si je code </p>
+          <pre>
+            <code class="language-js">
+            function draw() {
+              // code pour dessiner Lara
+              //...
+
+              // code pour dessiner Seb
+              drawStudent();
+
+              // code pour dessiner Seb
+              drawStudent();
+            }
+            </code>
+          </pre>
+          <p>Seb disparaît! En fait, on a utilisé deux fois une fonction qui au final... ne fait que dessiner Margo! Comment faire pour que la fonction puisse à la fois dessiner Margo et Seb et Lara et Jean-Mich...?</p>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint9d" role="button" aria-expanded="false" aria-controls="collapseHint9d">Indice 4</a>
+      </p>
+      <div class="collapse mb-3" id="collapseHint9d">
+        <div class="card card-body">
+          <p>Pour rendre ta fonction <code class="language-js">drawStudent()</code> plus flexible, tu vas devoir utiliser des paramètres:</p>
+          <pre>
+            <code class="language-js">
+            function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name) {
+              //...
+            }
+            </code>
+          </pre>
+
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer9" role="button" aria-expanded="false" aria-controls="collapseAnswer9">Réponse</a>
+      </p>
+      <div class="collapse mb-3" id="collapseAnswer9">
+        <div class="card card-body">
+
+        <pre>
+          <code class="language-js">
+          function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+
+   // Lara
+  drawStudent(200, 100, "peru", "PaleVioletRed", "olive", "Lara");
+
+  // Seb
+  drawStudent(100, 300, "PapayaWhip", "SaddleBrown", "Indigo", "Seb");
+
+  // Margo
+  drawStudent(300, 300, "RosyBrown", "Wheat", "silver", "Margo");
+}
+
+function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name) {
+  // le visage
+  fill(skinColor);
+  ellipse(positionX, positionY, 50, 60);
+
+  // les yeux
+  fill(eyesColor);
+  circle(positionX-10, positionY-5, 10);
+  circle(positionX+10, positionY-5, 10);
+
+  // bouche
+  fill("white");
+  arc(positionX, positionY+10, 20, 15, 0, PI, CHORD);
+
+  // cheuveux
+  fill(hairColor);
+  rect(positionX-2.5, positionY-39, 5, 15);
+  rect(positionX+5, positionY-37, 5, 15);
+  rect(positionX-9.5, positionY-37, 5, 15);
+
+  // nom
+  fill("black");
+  textSize(32);
+  text(name, positionX-35, positionY+80);
+}
+          </code>
+        </pre>
+        <p>Mon code ne fait plus que 42 lignes!</p>
+
         </div>
       </div>
     </div>
