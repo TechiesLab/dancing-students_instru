@@ -734,6 +734,42 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
     <img src="images/students_move_r.gif" class="img-shadow mb-3" alt="">
     <p>Comment faire en sorte pour qu'après une certaine distance, les étudiants reviennent vers la gauche?</p>
 
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint11a" role="button" aria-expanded="false" aria-controls="collapseHint11a">Indice 1</a>
+    </p>
+    <div class="collapse mb-3" id="collapseHint11a">
+      <div class="card card-body">
+      <p>Pour aller vers la gauche, il suffit de <strong>diminuer</strong> la valeur de la position en x:</p>
+      <pre>
+        <code class="language-js">
+        positionXMargo--;
+        </code>
+      </pre>
+
+      <p>Par contre, si l'on augmente puis l'on diminue la position l'un à la suite de l'autre, les deux instructions s'annulent et les étudiants restent immobiles:</p>
+
+      <pre>
+        <code class="language-js">
+        positionXMargo++;
+        positionXMargo--;
+        </code>
+      </pre>
+
+      <p>Il faut donc trouver une façon de dire à l'ordinateur "augmente jusqu'à ce que tu sois à +10 de ta position initiale et ensuite diminue, jusqu'à ce que tu sois à -10 de ta position initiale.</p>
+      </div>
+    </div>
+
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint11b" role="button" aria-expanded="false" aria-controls="collapseHint11b">Indice 2</a>
+    </p>
+    <div class="collapse mb-3" id="collapseHint11b">
+      <div class="card card-body">
+      <p>Il faudra probablement que tu sauvegardes la position initiale de chaque étudiant. Cette position ne changera jamais, tandis que la position "actuelle" de l'étudiant, elle, va changer.</p>
+
+      <p>Il te faudra également savoir la <strong>direction</strong> actuelle de chacun de tes étudiants.</p>
+      </div>
+    </div>
+
     </div>
   </div>
 </div>  <!-- end of card -->
