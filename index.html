@@ -421,7 +421,7 @@
       <div class="alert alert-warning" role="alert">
         <p>
           <i class="fas fa-exclamation-circle"></i>
-          Assure-toi que les
+          Assure-toi que
           <ul>
             <li>les yeux,</li>
             <li>la peau,</li>
@@ -666,7 +666,69 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
   </div>
   <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
     <div class="card-body">
-     <p>Comment vas-tu faire pour faire "danser" tes étudiants? Conseil: commence par les faire bouger vers la droite.</p>
+     <p>Comment vas-tu faire pour faire "danser" tes étudiants? Essaie d'abord de les faire bouger vers la droite. Pour cela ton ordinateur auras constamment besoin de savoir quelle est la position de chaque étudiant. En d'autres mots, il aura besoin de stocker dans sa mémoire la position de chaque étudiant. Et qui dit stocker, dit...</p>
+
+     <p>
+       <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint11a" role="button" aria-expanded="false" aria-controls="collapseHint11a">Indice 1</a>
+     </p>
+     <div class="collapse mb-3" id="collapseHint11a">
+       <div class="card card-body">
+         <p>... dit variable! Mais combien de variable te faudra-t-il?</p>
+       </div>
+     </div>
+
+     <p>
+       <a class="btn btn-primary" data-toggle="collapse" href="#collapseHintb" role="button" aria-expanded="false" aria-controls="collapseHintb">Indice 2</a>
+     </p>
+     <div class="collapse mb-3" id="collapseHintb">
+       <div class="card card-body">
+         <p>Si tu as 3 étudiants, il te faudra 3 variables: une pour la position sur l'axe des <code class="language-js">x</code> de chaque étudiant.</p>
+       </div>
+     </div>
+
+     <p>
+       <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer" role="button" aria-expanded="false" aria-controls="collapseAnswer">Réponse</a>
+     </p>
+     <div class="collapse mb-3" id="collapseAnswer">
+       <div class="card card-body">
+       <pre>
+         <code class="language-js">
+          // j'initialise les trois variables de position
+          let positionXLara = 200;
+          let positionXSeb = 100;
+          let positionXMargo = 300;
+
+          function setup() {
+            createCanvas(400, 400);
+          }
+
+          function draw() {
+            background(220);
+
+            // lorsque j'appelle la fonction drawStudent() j'utilise les variables définies plus haut (plutôt que de mettre directement la valeur)
+            // Lara
+            drawStudent(positionXLara, 100, "peru", "PaleVioletRed", "olive", "Lara");
+
+            // Seb
+            drawStudent(positionXSeb, 300, "PapayaWhip", "SaddleBrown", "Indigo", "Seb");
+
+            // Margo
+            drawStudent(positionXMargo, 300, "RosyBrown", "Wheat", "silver", "Margo");
+
+            // j'augmente la valeur des variables pour que les étudiants se déplacent vers la droite
+            positionXLara++;
+            positionXSeb++;
+            positionXMargo++;
+          }
+
+          function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name) {
+            //...
+          }
+         </code>
+       </pre>
+
+       </div>
+     </div>
     </div>
   </div>
 </div>  <!-- end of card -->
