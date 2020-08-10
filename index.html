@@ -660,7 +660,7 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
   <div class="card-header" id="headingEleven">
     <h2 class="mb-0">
       <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-        Etape 11 - La danse 💃
+        Etape 11 - Les étudiants s'enfuient!
       </button>
     </h2>
   </div>
@@ -733,6 +733,22 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
     <p>Tes étudiants se déplacent vers la droite... mais ne s'arrêtent jamais!</p>
     <img src="images/students_move_r.gif" class="img-shadow mb-3" alt="">
     <p>Comment faire en sorte pour qu'après une certaine distance, les étudiants reviennent vers la gauche?</p>
+    </div>
+  </div>
+</div>  <!-- end of card -->
+
+<div class="card">
+  <div class="card-header" id="headingTwelve">
+    <h2 class="mb-0">
+      <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+        Etape 12 - La danse 💃
+      </button>
+    </h2>
+  </div>
+  <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample">
+    <div class="card-body">
+
+    <p>Nos étudiants se déplacent vers la droite... mais ne s'arrêtent pas! Il est temps de la faire revenir vers la gauche!</p>
 
     <p>
       <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint11a" role="button" aria-expanded="false" aria-controls="collapseHint11a">Indice 1</a>
@@ -755,7 +771,7 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
         </code>
       </pre>
 
-      <p>Il faut donc trouver une façon de dire à l'ordinateur "augmente jusqu'à ce que tu sois à +10 de ta position initiale et ensuite diminue, jusqu'à ce que tu sois à -10 de ta position initiale.</p>
+      <p>Il faut donc trouver une façon de dire à l'ordinateur "augmente jusqu'à ce que tu sois à +30 de ta position initiale et ensuite diminue, jusqu'à ce que tu sois à -30 de ta position initiale.</p>
       </div>
     </div>
 
@@ -766,7 +782,121 @@ function drawStudent(positionX, positionY, skinColor, hairColor, eyesColor, name
       <div class="card card-body">
       <p>Il faudra probablement que tu sauvegardes la position initiale de chaque étudiant. Cette position ne changera jamais, tandis que la position "actuelle" de l'étudiant, elle, va changer.</p>
 
-      <p>Il te faudra également savoir la <strong>direction</strong> actuelle de chacun de tes étudiants.</p>
+      <p>Imagine que la position initiale en <code class="language-js">x</code> de Margo est <code class="language-js">300</code>. Tu peux dédider que Margo se déplacera jusqu'à <code class="language-js">330</code> avant de repartir vers la gauche:</p>
+
+      <pre>
+        <code class="language-js">
+        // cette variable sauvegarde la position actuelle de Margo
+        let positionXMargo = 300;
+
+        // cette variable sauvegarde la position originale (au tout début de l'animation) de Margo
+        let origineXMargo = 300;
+
+        function setup() {
+          // ...
+        }
+
+        function draw() {
+          // ...
+
+          positionXMargo++;
+
+          if (positionXMargo >= origineXMargo + 30) {
+            // ???
+          }
+        }
+        </code>
+      </pre>
+
+      <p>Qu'arrive-t-il quand Margo arrive au bout de sa trajectoire à droite?</p>
+      </div>
+    </div>
+
+    <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseHint11c" role="button" aria-expanded="false" aria-controls="collapseHint11c">Indice 3</a>
+    </p>
+    <div class="collapse mb-3" id="collapseHint11c">
+      <div class="card card-body">
+        <p>Au bout de la trajectoire à droite, Margo doit changer de direction! On pourrait être tenté de coder quelque chose comme ceci:</p>
+
+        <pre>
+          <code class="language-js">
+          function draw() {
+            // ...
+
+            positionXMargo++;
+
+            if (positionXMargo >= origineXMargo + 30) {
+              positionXMargo--;
+            }
+          </code>
+        </pre>
+
+        <p>Mais ça ne fonctionnerait pas! En effet, quand Margo atteindrait la position en <code class="language-js">x</code> de <code class="language-js">330</code>, la condition <code class="language-js">positionXMargo--</code> s'appliquerait et donc Margo retournerait à la position <code class="language-js">329</code>. La ligne de code <code class="language-js">positionXMargo++</code> s'appliquerait ensuite et Margo retournerait à <code class="language-js">330</code>. Au final, Margo ferait du surplace entre <code class="language-js">329</code> et <code class="language-js">330</code>.</p>
+
+        <p>En fait, quand Margo arrive au bout de sa trajectoire à droite, il faut qu'elle change de <strong>direction</strong>! Et bien entendu, ce serait chouette que l'ordinateur sache la direction de chaque étudiant en tout temps. Il faut donc créer une variable... direction pour chaque étudiant!</p>
+        <pre>
+          <code class="language-js">
+
+          let positionXMargo = 300;
+          let origineXMargo = 300;
+
+          // cette variable donne la direction de Margo (au début, elle part vers la droite)
+          let directionMargo = "droite";
+
+          function setup() {
+            // ...
+          }
+
+          function draw() {
+            // ...
+
+            positionXMargo++;
+
+            if (positionXMargo >= origineXMargo + 30) {
+              directionMargo = "gauche";
+            }
+          }
+          </code>
+        </pre>
+
+        <p>Il ne te reste plus qu'à changer la position de Margo en fonction de sa direction... eh oui, encore une condition à coder!</p>
+      </div>
+    </div>
+
+    <p>
+      <a class="btn btn-danger" data-toggle="collapse" href="#collapseAnswer12" role="button" aria-expanded="false" aria-controls="collapseAnswer12">Réponse</a>
+    </p>
+    <div class="collapse mb-3" id="collapseAnswer12">
+      <div class="card card-body">
+        <pre>
+          <code class="language-js">
+
+          let positionXMargo = 300;
+          let origineXMargo = 300;
+          let directionMargo = "droite";
+
+          function setup() {
+            // ...
+          }
+
+          function draw() {
+            // ...
+            if (positionXMargo >= origineXMargo + 30) {
+              directionMargo = "gauche";
+            } else if (positionXMargo <= origineXMargo - 30) {
+              directionMargo = "droite";
+            }
+
+            if (positionXMargo == "droite") {
+              positionXMargo++;
+            } else {
+              positionXMargo--;
+            }
+          }
+          </code>
+        </pre>
+
       </div>
     </div>
 
